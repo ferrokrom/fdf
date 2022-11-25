@@ -10,11 +10,14 @@ app.use(express.json());
 
 // Req and Res logger.
 
-app.use("/", (req, res) => {
-  res.json("asadsdasdasd");
+app.use(express.static(path.join(__dirname, "/ferro")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/ferro/build", "index.html"));
 });
 let port = process.env.PORT || 4000;
 console.log(process.env.PORT);
+
 app.listen(port, () => {
   console.log(`Example app listening at port http:${port}`);
 });

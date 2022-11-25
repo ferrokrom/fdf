@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node index.js",
+    "server":"node index.js",
+    "heroku-postbuild":"cd ferro && npm i && npm run build"
   },
   "keywords": [],
   "author": "",
