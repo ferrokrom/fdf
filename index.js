@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Req and Res logger.
 
-app.use(express.static(path.join(__dirname, "/ferro")));
+app.use(express.static(path.join(__dirname, "/ferro/build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/ferro/build", "index.html"));
